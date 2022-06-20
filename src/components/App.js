@@ -1,8 +1,17 @@
+import Navbar from './Navbar';
+import WorkSpace from './WorkSpace'
+
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+
 function App() {
   return (
-    <>
-    <span className="text-4xl">sdf</span>
-    </>
+    <Router>
+    <Navbar />
+    <Routes>
+    <Route exact path='/' element={<WorkSpace />} />
+    </Routes>
+    </Router>
   );
 }
 
