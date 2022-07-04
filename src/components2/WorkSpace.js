@@ -1,5 +1,5 @@
 import React from "react";
-import Tabs from './tab-components/Index'
+import Tabs from './tab-components/index'
 
 export default function WorkSpace() {
   return (

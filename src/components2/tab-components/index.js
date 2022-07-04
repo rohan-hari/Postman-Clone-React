@@ -24,7 +24,7 @@ export default function index() {
               </Tab>
             ))}
       </Tab.List>
-    <Tab.Panels className="pt-4 pb-2 px-4 rounded-b-lg rounded-tr-lg border">
+    <Tab.Panels className="pt-4 pb-2 px-4 rounded-b-lg rounded-tr-lg border border-gray-300">
         <QueryParamsTab />
         <HeadersTab />
         <JsonTab />
