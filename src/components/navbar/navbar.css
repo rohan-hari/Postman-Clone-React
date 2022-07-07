@@ -1,0 +1,16 @@
+.nav-main {
+    border-top: 4px solid orange; 
+    border-bottom: 1px solid #e3e3e3;
+    background-color: white; 
+}
+.nav-container {
+    display: flex;
+    margin:0 auto; 
+    max-width:1200px;
+    padding: 14px 0px;
+}
+.nav-container span {
+    font-size: 24px;
+    font-weight: 600; 
+    color: #ff9100;
+}
