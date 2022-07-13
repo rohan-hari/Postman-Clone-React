@@ -8,7 +8,7 @@ const requestMethods = [
   { key: 'delete', value: 'DELETE' },
 ];
 
-export default function ReqInputs({
+export default function RequestEditor({
   url,
   setUrl,
   reqMethod,
