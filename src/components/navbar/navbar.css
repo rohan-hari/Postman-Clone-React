@@ -10,6 +10,7 @@
     padding: 14px 0px;
 }
 .nav-container span {
+    padding:0 8px;
     font-size: 24px;
     font-weight: 600; 
     color: #ff9100;
