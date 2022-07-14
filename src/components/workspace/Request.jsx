@@ -1,6 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import ReqInputs from '../Input/RequestEditor/RequestEditor';
+import React, { useState } from 'react';
+
+import RequestEditor from '../Input/RequestEditor/RequestEditor';
+import RequestTabGroup from '../Tab-Groups/RequestTabGroup';
 
 export default function Request() {
   const [url, setUrl] = useState('https://sample.com');
@@ -8,12 +9,13 @@ export default function Request() {
 
   return (
     <>
-      <ReqInputs
+      <RequestEditor
         url={url}
         setUrl={setUrl}
         reqMethod={reqMethod}
         setReqMethod={setReqMethod}
       />
+      <RequestTabGroup />
     </>
   );
 }

@@ -1,11 +1,26 @@
 import React from 'react';
 
 const requestMethods = [
-  { key: 'get', value: 'GET' },
-  { key: 'post', value: 'POST' },
-  { key: 'put', value: 'PUT' },
-  { key: 'patch', value: 'PATCH' },
-  { key: 'delete', value: 'DELETE' },
+  {
+    key: 'get',
+    value: 'GET',
+  },
+  {
+    key: 'post',
+    value: 'POST',
+  },
+  {
+    key: 'put',
+    value: 'PUT',
+  },
+  {
+    key: 'patch',
+    value: 'PATCH',
+  },
+  {
+    key: 'delete',
+    value: 'DELETE',
+  },
 ];
 
 export default function RequestEditor({
