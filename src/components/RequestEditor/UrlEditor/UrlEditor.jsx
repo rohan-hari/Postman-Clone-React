@@ -2,28 +2,28 @@ import React from 'react';
 
 const requestMethods = [
   {
-    key: 'get',
-    value: 'GET',
+    slug: 'get',
+    method: 'GET',
   },
   {
-    key: 'post',
-    value: 'POST',
+    slug: 'post',
+    method: 'POST',
   },
   {
-    key: 'put',
-    value: 'PUT',
+    slug: 'put',
+    method: 'PUT',
   },
   {
-    key: 'patch',
-    value: 'PATCH',
+    slug: 'patch',
+    method: 'PATCH',
   },
   {
-    key: 'delete',
-    value: 'DELETE',
+    slug: 'delete',
+    method: 'DELETE',
   },
 ];
 
-export default function RequestEditor({
+export default function UrlEditor({
   url,
   setUrl,
   reqMethod,
@@ -38,8 +38,8 @@ export default function RequestEditor({
           onChange={(e) => setReqMethod(e.target.value)}
         >
           {requestMethods.map((option) => (
-            <option key={option.key} value={option.value}>
-              {option.value}
+            <option key={option.slug} value={option.method}>
+              {option.method}
             </option>
           ))}
         </select>

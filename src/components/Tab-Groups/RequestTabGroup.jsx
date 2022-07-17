@@ -1,28 +1,38 @@
 import React from 'react';
 import { Tab } from '@headlessui/react';
 
-import KeyValuePane from '../Input/KeyValue/KeyValuePane';
+import KeyValuePanel from '../RequestEditor/KeyValue/KeyValuePanel';
+import JsonEditorPanel from '../RequestEditor/JsonEditor/JsonEditorPanel';
 
 export default function RequestTabGroup({
   queryParams,
   setQueryParams,
   headers,
   setHeaders,
+  body,
+  setBody,
 }) {
   const requestTabs = [
     {
       slug: 'query-params',
       title: 'Query Params',
-      pane: KeyValuePane,
+      pane: KeyValuePanel,
       state: queryParams,
       setState: setQueryParams,
     },
     {
       slug: 'headers',
       title: 'Headers',
-      pane: KeyValuePane,
+      pane: KeyValuePanel,
       state: headers,
       setState: setHeaders,
+    },
+    {
+      slug: 'body',
+      title: 'Body',
+      pane: JsonEditorPanel,
+      state: body,
+      setState: setBody,
     },
   ];
 
@@ -36,7 +46,7 @@ export default function RequestTabGroup({
       <Tab.Panels>
         {requestTabs.map((tab) => (
           <Tab.Panel key={tab.slug}>
-            <tab.pane />
+            <tab.pane state={tab.state} setState={tab.setState} />
           </Tab.Panel>
         ))}
       </Tab.Panels>
