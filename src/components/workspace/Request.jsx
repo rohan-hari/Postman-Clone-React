@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 import UrlEditor from '../RequestEditor/UrlEditor/UrlEditor';
 import RequestTabGroup from '../Tab-Groups/RequestTabGroup';
+
+const keyPairInitState = [
+  {
+    id: uuidv4(),
+    keyItem: '',
+    valueItem: '',
+  },
+];
 
 export default function Request() {
   const [url, setUrl] = useState('https://sample.com');
   const [reqMethod, setReqMethod] = useState('GET');
 
-  const [queryParams, setQueryParams] = useState();
-  const [headers, setHeaders] = useState();
+  const [queryParams, setQueryParams] = useState(keyPairInitState);
+  const [headers, setHeaders] = useState(keyPairInitState);
   const [body, setBody] = useState('{\n\t\n}');
   return (
     <>
