@@ -2,7 +2,7 @@ import React from 'react';
 import { Tab } from '@headlessui/react';
 
 import KeyValuePanel from '../RequestEditor/KeyValue/KeyValuePanel';
-import JsonEditorPanel from '../RequestEditor/JsonEditor/JsonEditorPanel';
+import JsonEditorPanel from '../RequestEditor/Json/JsonEditorPanel';
 
 export default function RequestTabGroup({
   queryParams,

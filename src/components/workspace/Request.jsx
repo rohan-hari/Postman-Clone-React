@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import UrlEditor from '../RequestEditor/UrlEditor/UrlEditor';
+import UrlEditor from '../RequestEditor/Url/UrlEditor';
 import RequestTabGroup from '../Tab-Groups/RequestTabGroup';
 
 const keyPairInitState = [
