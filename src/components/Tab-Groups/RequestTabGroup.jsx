@@ -1,5 +1,7 @@
 import React from 'react';
-import { Tab } from '@headlessui/react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+import './tabGroups.css'
 
 import KeyValuePanel from '../RequestEditor/KeyValue/KeyValuePanel';
 import JsonEditorPanel from '../RequestEditor/Json/JsonEditorPanel';
@@ -37,22 +39,22 @@ export default function RequestTabGroup({
   ];
 
   return (
-    <Tab.Group>
-      <Tab.List>
+    <Tabs forceRenderTabPanel>
+      <TabList>
         {requestTabs.map((tab) => (
           <Tab key={tab.slug}>{tab.title}</Tab>
         ))}
-      </Tab.List>
-      <Tab.Panels>
+      </TabList>
+  
         {requestTabs.map((tab) => (
-          <Tab.Panel key={tab.slug}>
+          <TabPanel  key={tab.slug}>
             <tab.panel
               panelValue={tab.panelValue}
               setPanelValue={tab.setPanelValue}
             />
-          </Tab.Panel>
+          </TabPanel>
         ))}
-      </Tab.Panels>
-    </Tab.Group>
+
+    </Tabs>
   );
 }
