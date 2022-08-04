@@ -17,6 +17,7 @@ export default function Request() {
 
   const [queryParams, setQueryParams] = useState(keyPairInitState);
   const [headers, setHeaders] = useState(keyPairInitState);
+
   const [body, setBody] = useState('{\n\t\n}');
   return (
     <>
@@ -31,7 +32,7 @@ export default function Request() {
         setQueryParams={setQueryParams}
         headers={headers}
         setHeaders={setHeaders}
-        body={body}
+        body={'{\n\t\n}'}
         setBody={setBody}
       />
     </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-import './tabGroups.css'
+import './Tab-Groups.css';
 
 import KeyValuePanel from '../RequestEditor/KeyValue/KeyValuePanel';
 import JsonEditorPanel from '../RequestEditor/Json/JsonEditorPanel';
@@ -45,16 +45,15 @@ export default function RequestTabGroup({
           <Tab key={tab.slug}>{tab.title}</Tab>
         ))}
       </TabList>
-  
-        {requestTabs.map((tab) => (
-          <TabPanel  key={tab.slug}>
-            <tab.panel
-              panelValue={tab.panelValue}
-              setPanelValue={tab.setPanelValue}
-            />
-          </TabPanel>
-        ))}
 
+      {requestTabs.map((tab) => (
+        <TabPanel key={tab.slug}>
+          <tab.panel
+            panelValue={tab.panelValue}
+            setPanelValue={tab.setPanelValue}
+          />
+        </TabPanel>
+      ))}
     </Tabs>
   );
 }
