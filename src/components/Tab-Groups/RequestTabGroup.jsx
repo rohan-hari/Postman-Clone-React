@@ -3,8 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import './Tab-Groups.css';
 
-import KeyValuePanel from '../RequestEditor/KeyValue/KeyValuePanel';
-import JsonEditorPanel from '../RequestEditor/Json/JsonEditorPanel';
+import KeyValuePanel from '../Panes/KeyValue/KeyValuePanel';
+import JsonEditorPanel from '../Panes/Json/JsonEditorPanel';
 
 export default function RequestTabGroup({
   queryParams,
