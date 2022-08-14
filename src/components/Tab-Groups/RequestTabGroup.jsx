@@ -19,22 +19,22 @@ export default function RequestTabGroup({
       slug: 'query-params',
       title: 'Query Params',
       panel: KeyValuePane,
-      panelValue: queryParams,
-      setPanelValue: setQueryParams,
+      paneValue: queryParams,
+      setPaneValue: setQueryParams,
     },
     {
       slug: 'headers',
       title: 'Headers',
       panel: KeyValuePane,
-      panelValue: headers,
-      setPanelValue: setHeaders,
+      paneValue: headers,
+      setPaneValue: setHeaders,
     },
     {
       slug: 'body',
       title: 'Body',
       panel: JsonEditorPane,
-      panelValue: body,
-      setPanelValue: setBody,
+      paneValue: body,
+      setPaneValue: setBody,
     },
   ];
 
@@ -49,8 +49,8 @@ export default function RequestTabGroup({
       {requestTabs.map((tab) => (
         <TabPanel key={tab.slug}>
           <tab.panel
-            panelValue={tab.panelValue}
-            setPanelValue={tab.setPanelValue}
+            paneValue={tab.paneValue}
+            setPaneValue={tab.setPaneValue}
           />
         </TabPanel>
       ))}

@@ -12,8 +12,8 @@ const basicExtensions = [
 ];
 
 export default function JsonEditorPanel({
-  panelValue,
-  setPanelValue,
+  paneValue,
+  setPaneValue,
   isEditable = true,
 }) {
   const editorRef = useRef();
@@ -22,12 +22,12 @@ export default function JsonEditorPanel({
     if (editorRef.current === null) return;
 
     const state = EditorState.create({
-      doc: panelValue,
+      doc: paneValue,
       extensions: [
         ...basicExtensions,
         EditorView.updateListener.of((view) => {
           if (view.docChanged) {
-            setPanelValue(view.state.doc);
+            setPaneValue(view.state.doc);
           }
         }),
         EditorView.editable.of(isEditable),
@@ -42,7 +42,7 @@ export default function JsonEditorPanel({
     return () => {
       view.destroy();
     };
-  }, [editorRef.current, panelValue]);
+  }, [editorRef.current, paneValue]);
 
   return <div ref={editorRef}></div>;
 }

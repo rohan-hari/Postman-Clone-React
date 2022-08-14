@@ -2,10 +2,10 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import KeyValueEditor from './KeyValueEditor';
 
-export default function KeyValuePane({ panelValue, setPanelValue }) {
+export default function KeyValuePane({ paneValue, setPaneValue }) {
   const onKeyPairAdd = () => {
-    setPanelValue((panelValue) => [
-      ...panelValue,
+    setPaneValue((paneValue) => [
+      ...paneValue,
       {
         id: uuidv4(),
         keyItem: '',
@@ -15,25 +15,25 @@ export default function KeyValuePane({ panelValue, setPanelValue }) {
   };
 
   const onKeyPairRemove = (keyPair) => {
-    let newKeyValues = [...panelValue];
+    let newKeyValues = [...paneValue];
     newKeyValues = newKeyValues.filter((x) => x.id !== keyPair.id);
-    setPanelValue(newKeyValues);
+    setPaneValue(newKeyValues);
   };
 
   const onKeyPairUpdate = (keyPair) => {
-    const elementIndex = panelValue.findIndex(
+    const elementIndex = paneValue.findIndex(
       (element) => element.id === keyPair.id
     );
-    let newKeyValues = [...panelValue];
+    let newKeyValues = [...paneValue];
     newKeyValues[elementIndex] = {
       ...newKeyValues[elementIndex],
       keyItem: keyPair.keyItem,
       valueItem: keyPair.valueItem,
     };
-    setPanelValue(newKeyValues);
+    setPaneValue(newKeyValues);
   };
 
-  const renderedList = panelValue.map((keyPair) => {
+  const renderedList = paneValue.map((keyPair) => {
     return (
       <KeyValueEditor
         key={keyPair.id}

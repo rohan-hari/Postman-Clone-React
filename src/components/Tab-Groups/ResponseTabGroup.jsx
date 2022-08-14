@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import JsonEditorPane from '../Panes/Json/JsonEditorPane';
 import ResponseHeaderPane from '../Panes/ResponseHeader/ResponseHeaderPane';
 
-export default function ResponseTabGroup({ doc, setDoc }) {
+export default function ResponseTabGroup({ doc, setDoc, response }) {
   return (
     <>
       <Tabs>
@@ -12,6 +12,16 @@ export default function ResponseTabGroup({ doc, setDoc }) {
           <Tab>Response Body</Tab>
           <Tab>Response Header</Tab>
         </TabList>
+        <TabPanel>
+          <JsonEditorPane
+            paneValue={doc}
+            setPaneValue={setDoc}
+            isEditable={false}
+          />
+        </TabPanel>
+        <TabPanel>
+          <ResponseHeaderPane response={response} />
+        </TabPanel>
       </Tabs>
     </>
   );
