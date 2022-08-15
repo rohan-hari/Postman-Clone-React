@@ -1,2 +1,2 @@
-# Postman Clone App
-Technologies used : React, Tailwind CSS
+# Postman Clone React
+--------- Under construction -------------
