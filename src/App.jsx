@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Layout from './components/Layout/Layout';
 import Request from './components/Workspace/Request/RequestPanel';
 import Response from './components/Workspace/Response/ResponsePanel';
 
 const App = () => {
   const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
-      <Navbar />
-      <Request />
-      <Response response={response} />
+      <Layout>
+        <Request setResponse={setResponse} setLoading={setLoading} />
+        <Response response={response} loading={loading} />
+      </Layout>
     </>
   );
 };
