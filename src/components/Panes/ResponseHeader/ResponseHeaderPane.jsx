@@ -15,7 +15,7 @@ export default function ResponseHeaderPane({ response }) {
   }
   const renderedHeaders = responseHeaders.map(({ key, value }) => {
     return (
-      <tr>
+      <tr key={key}>
         <td>{key}</td>
         <td>{value}</td>
       </tr>
@@ -23,11 +23,13 @@ export default function ResponseHeaderPane({ response }) {
   });
   return (
     <table>
-      <tr>
-        <th>Key</th>
-        <th>Value</th>
-      </tr>
-      {renderedHeaders}
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>{renderedHeaders}</tbody>
     </table>
   );
 }

@@ -28,7 +28,7 @@ export default function UrlEditor({
   setUrl,
   reqMethod,
   setReqMethod,
-  sendRequest,
+  onInputSend,
 }) {
   return (
     <>
@@ -44,7 +44,7 @@ export default function UrlEditor({
           ))}
         </select>
         <input value={url} onChange={(e) => setUrl(e.target.value)} />
-        <button type='button' onClick={(e) => sendRequest(e)}>
+        <button type='button' onClick={(e) => onInputSend(e)}>
           Send
         </button>
       </form>
