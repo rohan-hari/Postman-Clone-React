@@ -42,6 +42,7 @@ export default function JsonEditorPanel({
     return () => {
       view.destroy();
     };
+    // eslint-disable-next-line
   }, [editorRef.current, paneValue]);
 
   return <div ref={editorRef}></div>;

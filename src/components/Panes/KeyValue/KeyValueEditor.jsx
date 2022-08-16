@@ -19,6 +19,7 @@ export default function KeyValueEditor({
 
   useEffect(() => {
     setKeyPair(debouncedKeyValue);
+    // eslint-disable-next-line
   }, [debouncedKeyValue]);
 
   const handleOnChange = (e) => {

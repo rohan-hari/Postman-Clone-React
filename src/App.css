@@ -1,12 +1,3 @@
-* {    
-  margin: 0;
-  padding: 0 
-}
-html {
-  font-family: 'Segoe UI', sans-serif !important;
-  background-color: #eff4f7;
-}
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
-  color: inherit;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
