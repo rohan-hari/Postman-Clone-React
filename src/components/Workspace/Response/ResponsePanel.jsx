@@ -38,17 +38,17 @@ export default function Response({ response, loading }) {
   }
   const RenderedResponseMeta = () => {
     return (
-      <>
-        <div>Status:{status}</div>
-        <div>Time:{time}</div>
-        <div>Size:{size}</div>
-      </>
+      <div className='flex mt-3'>
+        <span className='w-28'>Status: {status}</span>
+        <span className='w-24'>Time: {time}</span>
+        <span className='w-24'>Size: {size}</span>
+      </div>
     );
   };
 
   return (
-    <>
-      <h3>Response</h3>
+    <div className='my-4'>
+      <span className='text-2xl font-medium'>Response</span>
       <RenderedResponseMeta />
       <ResponseTabGroup
         doc={doc}
@@ -56,6 +56,6 @@ export default function Response({ response, loading }) {
         response={response}
         loading={loading}
       />
-    </>
+      </div>
   );
 }

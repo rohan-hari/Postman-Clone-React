@@ -46,8 +46,12 @@ export default function KeyValuePane({ paneValue, setPaneValue }) {
 
   return (
     <>
+    <div className=''>
       {renderedList}
-      <button onClick={() => onKeyPairAdd()}>Add</button>
+      <button 
+        className="px-6 py-1 rounded-md text-orange-600 border border-orange-400 hover:bg-orange-100"
+        onClick={() => onKeyPairAdd()}>Add</button>
+        </div>
     </>
   );
 }

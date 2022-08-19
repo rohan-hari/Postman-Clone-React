@@ -13,20 +13,20 @@ export default function ResponseHeaderPane({ response }) {
       });
     }
   }
-  const renderedHeaders = responseHeaders.map(({ key, value }) => {
+  const renderedHeaders = responseHeaders.map(({ key, value, index }) => {
     return (
-      <tr key={key}>
-        <td>{key}</td>
+      <tr key={index}>
+        <td className='pb-1'>{key}</td>
         <td>{value}</td>
       </tr>
     );
   });
   return (
-    <table>
+    <table className='text-left'>
       <thead>
-        <tr>
-          <th>Key</th>
-          <th>Value</th>
+        <tr >
+          <th className='w-36 pb-1.5'>Key</th>
+          <th className='w-60'>Value</th>
         </tr>
       </thead>
       <tbody>{renderedHeaders}</tbody>
