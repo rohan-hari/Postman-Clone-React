@@ -6,7 +6,9 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       <main>
-        <div className='max-w-6xl mx-auto pt-6 bg-white'>{children}</div>
+        <div className='flex max-w-6xl mx-auto px-5 pt-6 bg-white '>
+          <div className='mx-auto w-full'>{children}</div>
+        </div>
       </main>
     </>
   );

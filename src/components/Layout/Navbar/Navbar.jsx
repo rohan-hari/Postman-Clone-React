@@ -4,11 +4,13 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <div className=' border-t-4 border-b border-orange-500 bg-white '>
-      <div className='flex max-w-6xl mx-auto'>
-        <span className='flex py-4 px-4 font-semibold text-orange-500 text-2xl'>
-          POSTMAN CLONE
-        </span>
+    <div className=' border-t-4 border-orange-500 bg-white '>
+      <div className='border-b border-gray-200'>
+        <div className='flex max-w-6xl mx-auto'>
+          <span className='py-4 px-4 text-2xl font-semibold text-orange-500'>
+            POSTMAN CLONE
+          </span>
+        </div>
       </div>
     </div>
   );
