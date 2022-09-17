@@ -38,7 +38,7 @@ export default function Response({ response, loading }) {
   }
   const RenderedResponseMeta = () => {
     return (
-      <div className='flex mt-3'>
+      <div className="flex mt-3">
         <span className='w-28'>Status: {status}</span>
         <span className='w-24'>Time: {time}</span>
         <span className='w-24'>Size: {size}</span>
@@ -49,7 +49,7 @@ export default function Response({ response, loading }) {
   return (
     <div className='my-4'>
       <span className='text-2xl font-medium'>Response</span>
-      <RenderedResponseMeta />
+      {response ? ( <RenderedResponseMeta /> ) : null}
       <ResponseTabGroup
         doc={doc}
         setDoc={setDoc}
