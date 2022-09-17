@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Postman-Clone-React/static/css/main.55168031.css",
+    "main.js": "/Postman-Clone-React/static/js/main.e0b445d8.js",
+    "index.html": "/Postman-Clone-React/index.html",
+    "main.55168031.css.map": "/Postman-Clone-React/static/css/main.55168031.css.map",
+    "main.e0b445d8.js.map": "/Postman-Clone-React/static/js/main.e0b445d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55168031.css",
+    "static/js/main.e0b445d8.js"
+  ]
+}
